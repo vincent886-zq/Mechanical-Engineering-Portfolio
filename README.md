@@ -6,18 +6,18 @@ Mechanical Engineering Portfolio · 结构设计 / 传动设计 / 工程图 / �
 
 ## 项目速览
 
-| 非标输送与分拣 | 行星齿轮传动设计 |
-| :---: | :---: |
-| [![快递分拨输送系统](projects/parcel-sorting/images/overview.png)](projects/parcel-sorting/README.md) | [![NGW 减速器](projects/ngw-reducer/images/assembly.png)](projects/ngw-reducer/README.md) |
-| [快递包装箱分拨输送系统 →](projects/parcel-sorting/README.md) | [单级 NGW 行星减速器 →](projects/ngw-reducer/README.md) |
-| 总体布局、翻转机构、分拨机构、输送驱动 | 齿数配比、MATLAB 筛选、齿宽与轴承布置 |
+### [快递包装箱分拨输送系统 →](projects/parcel-sorting/README.md)
+
+[![快递分拨输送系统](projects/parcel-sorting/images/overview.png)](projects/parcel-sorting/README.md)
+
+总体布局、翻转机构、分拨机构与输送驱动。点击图片或标题查看图文案例。
 
 ## 从这些案例可以看到什么
 
 - **结构设计**：把功能要求拆解为输送、翻转、分拨和传动等子机构，组织装配关系。
-- **工程图与明细表**：整理零件尺寸、左右镜像关系、标准件规格及装配标号对应关系。
-- **计算辅助设计**：用 MATLAB 比较载荷、几何、齿轮参数与安装空间，说明参数选择依据。
-- **软件协同**：SolidWorks 建模与装配，CAD/CAXA 图纸整理，MATLAB 参数分析与结果输出。
+- **工程图**：表达总体布局、传动关系与零件安装接口。
+- **计算辅助设计**：整理驱动功率与传动参数，说明方案选择依据。
+- **软件协同**：SolidWorks 建模与装配，CAD/CAXA 图纸整理。
 
 ## 阅读方式
 
