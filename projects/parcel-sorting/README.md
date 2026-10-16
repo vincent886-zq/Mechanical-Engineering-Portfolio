@@ -59,4 +59,16 @@
 
 本案例展示机械方案与图纸成果；速度和格口数量为设计参数。
 
+## 模型和工程图下载
+
+| 资料 | 内容 | 下载 |
+| --- | --- | --- |
+| SolidWorks 三维模型包 1 | 三包合计 73 个原生零件、装配及中性格式文件 | [下载第 1 包](downloads/parcel_sorting_SW2024_part1.zip) |
+| SolidWorks 三维模型包 2 | 与第 1、3 包解压到同一文件夹 | [下载第 2 包](downloads/parcel_sorting_SW2024_part2.zip) |
+| SolidWorks 三维模型包 3 | 三包合计约 47 MB | [下载第 3 包](downloads/parcel_sorting_SW2024_part3.zip) |
+| DWG 工程图包 | 11 张，总装、翻转、分拨及典型零件 | [下载 ZIP](downloads/parcel_sorting_DWG.zip) |
+| PDF 工程图包 | 11 张，便于直接阅读 | [下载 ZIP](downloads/parcel_sorting_PDF.zip) |
+
+三维文件中包含主装配、翻转机构、分拨模块及配套零件。请下载全部三个模型包，分别解压到同一文件夹，保留文件名和相对目录，再使用 SolidWorks 2024 打开 `快递包装箱分拣系统.SLDASM`。二维图纸包括链轮、带轮、辊轴、轴承座、安装板及分拨、翻转总装图。
+
 [← 返回作品集](../../README.md)
