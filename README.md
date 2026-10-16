@@ -20,6 +20,14 @@ Mechanical Engineering Portfolio · 结构设计 / 工程图 / 传动 / 有限�
 
 模块化机械结构、D-H 运动学与 SolidWorks 几何核对，结合 STM32、ESP-01S 和 App Inventor 手机界面设计。
 
+### 自动存取车控制原型
+
+[![双 STM32 控制架构](projects/automatic-parking-control/diagrams/architecture.svg)](projects/automatic-parking-control/README.md)
+
+[自动存取车：STM32、Wi-Fi 指令与限位采集 →](projects/automatic-parking-control/README.md)
+
+以嵌入式代码为主：双 STM32F103C8、6 路电机控制接口、14 路限位输入、4 个车位的存取命令；附源码与 SVG 程序逻辑图。
+
 ## 资料获取
 
 快递分拨案例提供 SolidWorks 原生模型及二维 DWG、PDF 图纸；轮腿案例提供最终 DWG。模型请保留解压后的目录关系，避免丢失装配引用。

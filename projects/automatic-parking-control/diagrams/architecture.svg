@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="640" viewBox="0 0 1120 640">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10" fill="#526782" /></marker></defs>
+<rect width="1120" height="640" fill="#f5f8fc" />
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#172c46">
+<text x="48" y="54" font-size="27" font-weight="bold" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif">自动存取车 · 双 STM32 控制架构</text>
+<text x="48" y="86" font-size="16" fill="#526782" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif">按应用源码绘制：通信、执行与限位反馈</text>
+<g fill="white" stroke="#a8bad1" stroke-width="2">
+<rect x="48" y="140" width="220" height="100" rx="12" />
+<rect x="350" y="140" width="220" height="100" rx="12" />
+<rect x="690" y="140" width="360" height="130" rx="12" fill="#e4efff" />
+<rect x="690" y="370" width="360" height="100" rx="12" />
+<rect x="350" y="370" width="220" height="100" rx="12" />
+<rect x="48" y="370" width="220" height="100" rx="12" />
+</g>
+<g text-anchor="middle" font-size="21" font-weight="bold">
+<text x="158" y="178" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">手机 App</text><text x="460" y="178" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">ESP-01S</text>
+<text x="870" y="178" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">执行控制板 · STM32F103C8</text>
+<text x="870" y="407" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">6 路电机控制接口</text>
+<text x="460" y="407" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">限位采集板</text><text x="158" y="407" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">14 路限位开关</text>
+</g>
+<g text-anchor="middle" font-size="16" fill="#526782">
+<text x="158" y="209" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">App Inventor / Socket</text><text x="460" y="209" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">AP 模式 / TCP 8080</text>
+<text x="870" y="208" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">命令解析 / 动作状态机 / OLED</text><text x="870" y="239" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">SPI 从设备 · 接收位置事件</text>
+<text x="870" y="440" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">方向 × 2 + 使能 / 路 · L298N</text>
+<text x="460" y="439" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">STM32 / SPI 主设备</text><text x="158" y="439" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">两端限位 + 中间限位</text>
+</g>
+<g fill="none" stroke="#526782" stroke-width="2.4" marker-end="url(#a)">
+<path d="M268 190H343" /><path d="M570 190H683" /><path d="M870 270V363" />
+<path d="M268 420H343" /><path d="M570 420H625V300H740V277" />
+</g>
+<g font-size="14" fill="#526782" text-anchor="middle"><text x="308" y="174" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">Wi-Fi</text><text x="630" y="162" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">USART1</text><text x="630" y="181" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">115200 / 8N1</text><text x="938" y="320" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">GPIO 输出</text><text x="308" y="404" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">GPIO</text><text x="550" y="324" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">SPI2 单字节事件</text></g>
+<path d="M48 526H1050" stroke="#d6e0ed" />
+<text x="48" y="563" font-size="18" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif">4 个车位 · 8 条存取命令 + 停止 / 回零命令入口</text>
+<text x="48" y="598" font-size="16" fill="#526782" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif">主从角色按 SPI 初始化代码确定；此图不表示已完成实机闭环验证。</text>
+</g></svg>
