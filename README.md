@@ -8,7 +8,7 @@ Mechanical Engineering Portfolio · 接单工程案例 / 结构设计 / 工程�
 
 ### 1. Hyper 机械腿结构与工程图
 
-[![Hyper 机械腿总装配图](projects/hyper-leg/images/assembly.png)](projects/hyper-leg/README.md)
+[![Hyper 机械腿总装配图](projects/hyper-leg/images/assembly-final-20261017.png)](projects/hyper-leg/README.md)
 
 [机械腿：连杆、脚踝 / 脚掌结构，原生工程图预览与模型下载 →](projects/hyper-leg/README.md)
 

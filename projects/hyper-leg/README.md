@@ -4,17 +4,17 @@
 
 围绕机械腿整理电机安装、腿部支架、传动连杆及脚踝 / 脚掌结构，提供三维装配与二维图纸。与轮腿机器人底盘分开展示，本页重点是机械结构及图纸表达。
 
-![机械腿总装图](images/assembly.png)
+![机械腿总装图](images/assembly-final-20261017.png)
 
-图 1｜机械腿总装配图，包含多视图、局部剖视和零件明细。原图标注总高 676 mm，明细列出 3 个 DM8009 电机。[查看高清 PDF](pdf/assembly.pdf)
+图 1｜机械腿总装配图，包含多视图、局部剖视和零件明细。原图标注总高 676 mm，明细列出 3 个 DM8009 电机。[查看高清 PDF](pdf/assembly-final-20261017.pdf)
 
-![脚掌结构](images/foot.png)
+![脚掌零件图：尺寸、粗糙度与技术要求](images/foot-final-20261017.png)
 
-图 2｜脚掌零件图：多处剖视、安装孔与尺寸、表面粗糙度及技术要求。[查看 PDF](pdf/foot.pdf)
+图 2｜脚掌零件图：多处剖视、安装孔与尺寸、表面粗糙度及技术要求。[查看 PDF](pdf/foot-final-20261017.pdf)
 
-![脚踝连杆](images/ankle-link.png)
+![脚踝连杆零件图：尺寸与形位公差](images/ankle-link-final-20261017.png)
 
-图 3｜脚踝连杆零件图：结构尺寸、角度、形位公差与基准表达。[查看 PDF](pdf/ankle-link.pdf)
+图 3｜脚踝连杆零件图：结构尺寸、角度、形位公差与基准表达。[查看 PDF](pdf/ankle-link-final-20261017.pdf)
 
 ## 资料下载
 
