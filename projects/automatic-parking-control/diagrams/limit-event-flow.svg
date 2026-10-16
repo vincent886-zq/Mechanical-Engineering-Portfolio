@@ -1,28 +1,58 @@
-<?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="660" viewBox="0 0 1120 660">
-<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10" fill="#526782" /></marker></defs>
-<rect width="1120" height="660" fill="#f5f8fc" />
-<g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#172c46">
-<text x="48" y="52" font-size="27" font-weight="bold" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif">限位事件 · 从采集到动作调度</text>
-<text x="48" y="83" font-size="16" fill="#526782" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif">实线表示源码中已有的处理链；不扩画尚未接通的自动回程。</text>
-<g fill="white" stroke="#a8bad1" stroke-width="2">
-<rect x="48" y="130" width="280" height="76" rx="10" /><rect x="48" y="250" width="280" height="76" rx="10" />
-<rect x="48" y="370" width="280" height="76" rx="10" /><rect x="48" y="490" width="280" height="76" rx="10" />
-<rect x="445" y="490" width="610" height="76" rx="10" fill="#e4efff" />
-<rect x="445" y="370" width="610" height="76" rx="10" fill="#e4efff" />
-<rect x="445" y="250" width="610" height="76" rx="10" fill="#e4efff" />
-<rect x="445" y="130" width="610" height="76" rx="10" fill="#e4efff" />
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="限位事件 · 从采集到动作调度">
+<rect width="1200" height="900" fill="#f5f8fc"/>
+<text x="52" y="54" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" text-anchor="start" fill="#18324e" font-weight="700">限位事件 · 从采集到动作调度</text>
+<text x="52" y="88" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="start" fill="#526782" font-weight="400">按 01 → 08 顺序阅读；不扩画源码中尚未接通的自动回程</text>
+<g data-node="left0"><rect x="60" y="140" width="400" height="112" rx="12" fill="white" stroke="#a8bad1" stroke-width="1.8"/>
+<text x="260.0" y="175" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" text-anchor="middle" fill="#18324e" font-weight="700">01 · 逐路读取 GPIO</text>
+<text x="260.0" y="205" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="middle" fill="#526782" font-weight="400">扫描 14 路输入</text>
+<text x="260.0" y="232" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="middle" fill="#526782" font-weight="400">GetKeyState(i)</text>
 </g>
-<g font-size="18" text-anchor="middle">
-<text x="188" y="162" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">逐路读取 14 个 GPIO</text><text x="188" y="187" font-size="14" fill="#526782" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">GetKeyState(i)</text>
-<text x="188" y="282" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">变化连续确认 5 次</text><text x="188" y="307" font-size="14" fill="#526782" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">debounce_count / last_state</text>
-<text x="188" y="402" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">确认低电平触发事件</text><text x="188" y="427" font-size="14" fill="#526782" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">释放只更新状态，不发送事件</text>
-<text x="188" y="522" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">映射事件码并通过 SPI 发送</text><text x="188" y="547" font-size="14" fill="#526782" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">SendKeyCommand(i)</text>
-<text x="750" y="522" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">控制板 SPI2 接收中断</text><text x="750" y="547" font-size="14" fill="#526782" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">读取单字节 / OLED 显示及阻塞延时</text>
-<text x="750" y="402" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">更新 motor_positions[1..6]</text><text x="750" y="427" font-size="14" fill="#526782" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">0 = 原点 / 1 = 终点 / 2 = 中间位置</text>
-<text x="750" y="282" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">主循环调用 process_action()</text><text x="750" y="307" font-size="14" fill="#526782" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">按当前动作状态检查位置标志</text>
-<text x="750" y="162" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">执行电机方向 / 使能操作</text><text x="750" y="187" font-size="14" fill="#526782" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle">切换下一动作状态；问题详见代码核对记录</text>
+<g data-node="left1"><rect x="60" y="310" width="400" height="112" rx="12" fill="white" stroke="#a8bad1" stroke-width="1.8"/>
+<text x="260.0" y="345" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" text-anchor="middle" fill="#18324e" font-weight="700">02 · 连续确认变化</text>
+<text x="260.0" y="375" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="middle" fill="#526782" font-weight="400">变化连续确认 5 次</text>
+<text x="260.0" y="402" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="middle" fill="#526782" font-weight="400">debounce_count / last_state</text>
 </g>
-<g stroke="#526782" fill="none" stroke-width="2.4" marker-end="url(#a)"><path d="M188 206V243" /><path d="M188 326V363" /><path d="M188 446V483" /><path d="M328 528H438" /><path d="M750 490V453" /><path d="M750 370V333" /><path d="M750 250V213" /></g>
-<text x="48" y="614" font-size="16" fill="#526782" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif">采集循环末尾另有 2 ms 延时；整体响应还受通信、显示和中断处理时间影响。</text>
-</g></svg>
+<g data-node="left2"><rect x="60" y="480" width="400" height="112" rx="12" fill="white" stroke="#a8bad1" stroke-width="1.8"/>
+<text x="260.0" y="515" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" text-anchor="middle" fill="#18324e" font-weight="700">03 · 确认低电平事件</text>
+<text x="260.0" y="545" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="middle" fill="#526782" font-weight="400">释放仅更新状态</text>
+<text x="260.0" y="572" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="middle" fill="#526782" font-weight="400">不发送释放事件</text>
+</g>
+<g data-node="left3"><rect x="60" y="650" width="400" height="112" rx="12" fill="white" stroke="#a8bad1" stroke-width="1.8"/>
+<text x="260.0" y="685" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" text-anchor="middle" fill="#18324e" font-weight="700">04 · 映射并发送事件</text>
+<text x="260.0" y="715" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="middle" fill="#526782" font-weight="400">SendKeyCommand(i)</text>
+<text x="260.0" y="742" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="middle" fill="#526782" font-weight="400">单字节事件码 / SPI2</text>
+</g>
+<g data-node="right0"><rect x="740" y="140" width="400" height="112" rx="12" fill="white" stroke="#a8bad1" stroke-width="1.8"/>
+<text x="940.0" y="175" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" text-anchor="middle" fill="#18324e" font-weight="700">08 · 电机输出与状态切换</text>
+<text x="940.0" y="205" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="middle" fill="#526782" font-weight="400">执行方向 / 使能操作</text>
+<text x="940.0" y="232" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="middle" fill="#526782" font-weight="400">转入下一动作状态</text>
+</g>
+<g data-node="right1"><rect x="740" y="310" width="400" height="112" rx="12" fill="white" stroke="#a8bad1" stroke-width="1.8"/>
+<text x="940.0" y="345" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" text-anchor="middle" fill="#18324e" font-weight="700">07 · 主循环动作调度</text>
+<text x="940.0" y="375" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="middle" fill="#526782" font-weight="400">process_action()</text>
+<text x="940.0" y="402" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="middle" fill="#526782" font-weight="400">按动作状态检查位置标志</text>
+</g>
+<g data-node="right2"><rect x="740" y="480" width="400" height="112" rx="12" fill="white" stroke="#a8bad1" stroke-width="1.8"/>
+<text x="940.0" y="515" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" text-anchor="middle" fill="#18324e" font-weight="700">06 · 更新电机位置标志</text>
+<text x="940.0" y="545" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="middle" fill="#526782" font-weight="400">motor_positions[1..6]</text>
+<text x="940.0" y="572" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="middle" fill="#526782" font-weight="400">0 原点 / 1 终点 / 2 中间位置</text>
+</g>
+<g data-node="right3"><rect x="740" y="650" width="400" height="112" rx="12" fill="white" stroke="#a8bad1" stroke-width="1.8"/>
+<text x="940.0" y="685" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" text-anchor="middle" fill="#18324e" font-weight="700">05 · 控制板接收中断</text>
+<text x="940.0" y="715" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="middle" fill="#526782" font-weight="400">SPI2 接收单字节事件</text>
+<text x="940.0" y="742" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="middle" fill="#526782" font-weight="400">OLED 显示及阻塞延时</text>
+</g>
+<g data-edge="left-down0"><polyline points="260,260 260.0,291.0" fill="none" stroke="#526782" stroke-width="2.2" stroke-linejoin="round"/><polygon points="260,302 255,291 265,291" fill="#526782"/></g>
+<g data-edge="right-up0"><polyline points="940,302 940.0,271.0" fill="none" stroke="#526782" stroke-width="2.2" stroke-linejoin="round"/><polygon points="940,260 935,271 945,271" fill="#526782"/></g>
+<g data-edge="left-down1"><polyline points="260,430 260.0,461.0" fill="none" stroke="#526782" stroke-width="2.2" stroke-linejoin="round"/><polygon points="260,472 255,461 265,461" fill="#526782"/></g>
+<g data-edge="right-up1"><polyline points="940,472 940.0,441.0" fill="none" stroke="#526782" stroke-width="2.2" stroke-linejoin="round"/><polygon points="940,430 935,441 945,441" fill="#526782"/></g>
+<g data-edge="left-down2"><polyline points="260,600 260.0,631.0" fill="none" stroke="#526782" stroke-width="2.2" stroke-linejoin="round"/><polygon points="260,642 255,631 265,631" fill="#526782"/></g>
+<g data-edge="right-up2"><polyline points="940,642 940.0,611.0" fill="none" stroke="#526782" stroke-width="2.2" stroke-linejoin="round"/><polygon points="940,600 935,611 945,611" fill="#526782"/></g>
+<g data-edge="transfer"><polyline points="468,706 721.0,706.0" fill="none" stroke="#526782" stroke-width="2.2" stroke-linejoin="round"/><polygon points="732,706 721,701 721,711" fill="#526782"/></g>
+<g data-edge-label="true"><rect x="510" y="657" width="180" height="29" rx="5" fill="#f5f8fc"/>
+<text x="600.0" y="677" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" text-anchor="middle" fill="#526782" font-weight="400">SPI2 位置事件</text>
+</g>
+<path d="M52 804 H1148" fill="none" stroke="#d6e0ed"/>
+<text x="52" y="832" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="start" fill="#526782" font-weight="400">采集循环末尾另有 2 ms 延时；通信、显示和中断处理也占用时间。</text>
+<text x="52" y="861" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" text-anchor="start" fill="#526782" font-weight="400">源码问题另见代码核对记录；此图只整理现有处理链。</text>
+</svg>
